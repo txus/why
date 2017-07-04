@@ -10,7 +10,7 @@
  pom {:project     project
       :version     version
       :description "Traceable business logic with decision trees"
-      :url         "https://txus.github.io/why"
+      :url         "https://blog.txus.io/why"
       :scm         {:url "https://github.com/txus/why"}
       :license     {"The MIT License (MIT)"
                     "http://opensource.org/licenses/mit-license.php"}})
@@ -19,5 +19,9 @@
   "Build and install the project locally."
   []
   (comp (pom) (jar) (install)))
+
+(deftask release
+  []
+  (comp (pom) (jar) (push)))
 
 (require '[adzerk.boot-test :refer [test]])

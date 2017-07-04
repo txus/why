@@ -4,7 +4,7 @@ Forget simplistic boolean arithmetic; embrace traceable decision trees.
 
 [![Travis Badge](https://img.shields.io/travis/txus/why/master.svg)](https://travis-ci.org/txus/why "Travis Badge")
 
-[![Clojars Project](http://clojars.org/txus/why/latest-version.svg)](http://clojars.org/txus/why)
+[![Clojars Project](http://clojars.org/why/latest-version.svg)](http://clojars.org/why)
 
 ```
 The awful thing about life is this: everyone has their reasons.
