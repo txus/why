@@ -6,6 +6,8 @@ Forget simplistic boolean arithmetic; embrace traceable decision trees.
 
 [![Clojars Project](http://clojars.org/why/latest-version.svg)](http://clojars.org/why)
 
+Works on Clojure and ClojureScript.
+
 ```
 The awful thing about life is this: everyone has their reasons.
 
