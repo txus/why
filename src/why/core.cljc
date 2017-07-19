@@ -1,6 +1,8 @@
 (ns why.core
-  (:require [clojure.core :as clj])
-  (:refer-clojure :exclude [and or not]))
+  (:require #?(:clj [clojure.core :as clj]
+               :cljs [cljs.core :as clj]))
+  #?(:cljs (:require-macros [cljs.core :as clj]))
+  (:refer-clojure :exclude [and or not when]))
 
 (defprotocol Decidable
   "A Decidable can be turned into a Because"
@@ -95,16 +97,19 @@
   (->If condition body (because false)))
 
 (extend-protocol Decidable
-  clojure.lang.Fn
+  #?(:clj  clojure.lang.Fn
+     :cljs function)
   (decide [this] (because (this)))
 
-  java.lang.Boolean
+  #?(:clj  java.lang.Boolean
+     :cljs boolean)
   (decide [this] (because this))
 
   nil
   (decide [_] (because nil))
 
-  Object
+  #?(:clj  Object
+     :cljs object)
   (decide [this]
     (because this)))
 

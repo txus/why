@@ -1,9 +1,9 @@
 (def project 'why)
-(def version "0.1.0")
+(def version "0.1.1")
 
 (set-env! :resource-paths #{"resources" "src"}
           :source-paths   #{"test"}
-          :dependencies   '[[org.clojure/clojure "RELEASE"]
+          :dependencies   '[[crisptrutski/boot-cljs-test "0.3.2-SNAPSHOT" :scope "test"]
                             [adzerk/boot-test "RELEASE" :scope "test"]])
 
 (task-options!
@@ -25,3 +25,4 @@
   (comp (pom) (jar) (push)))
 
 (require '[adzerk.boot-test :refer [test]])
+(require '[crisptrutski.boot-cljs-test :refer [test-cljs]])

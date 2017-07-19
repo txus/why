@@ -1,6 +1,6 @@
 sudo: false
 language: java
-script: boot test
+script: boot test && boot test-cljs
 install:
   - mkdir -p ~/bin
   - export PATH=~/bin:$PATH
